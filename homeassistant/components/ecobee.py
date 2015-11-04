@@ -2,7 +2,23 @@
 homeassistant.components.ecobee
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 Connects to ecobee.com, keeps the connection object.
+
+You will need to go to ecobee.com, login, and create a new device in
+the "Developer" section.  Grab the API key and add it to...
+
+In configuration.yaml:
+
+ecobee:
+    api_key: [your key]
+
+When you next start homeassistant, watch the logfile for the ecobee
+message about entering your pin on the website.  Grab the pin, go to
+ecobee.com and in the 'my apps' section in the menu, add a new
+application, and when asked to enter an authorization code, enter the
+4-character pin from the logfile.
+
 """
+
 import logging
 
 from homeassistant import bootstrap

@@ -3,6 +3,11 @@ homeassistant.components.sensors.ecobee
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 Adds support for Ecobee thermostat sensors and remote sensors.
 
+In configuration.yaml:
+
+sensor:
+    platform: ecobee
+
 """
 import logging
 

@@ -3,6 +3,11 @@ homeassistant.components.thermostat.ecobee
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 Adds support for Ecobee thermostats.
 
+In configuration.yaml:
+
+thermostat:
+    platform: ecobee
+
 """
 import logging
 
