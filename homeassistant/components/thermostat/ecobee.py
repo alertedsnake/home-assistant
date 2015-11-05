@@ -180,11 +180,7 @@ class EcobeeThermostat(ThermostatDevice):
 #            return
         _LOGGER.info("Polling thermostat {}".format(self.device.id))
 
-        # update if we haven't yet, or if there's an update in the poll result
-        if self.device.poll():
-            _LOGGER.info("Updating thermostat {}".format(self.device.id))
-
-            # read thermostat status
-            self.device.update()
+        # read thermostat status
+        self.device.update()
 
 

@@ -59,10 +59,10 @@ class EcobeeSensorBase(Entity):
         """ Returns a unique id. """
         return "{}/{}/{}".format(self.__class__.__name__, self._thermostat.id, self.device.id)
 
-    @property
-    def should_poll(self):
-        """ False because we will push our own state to HA when changed. """
-        return False
+    def update(self):
+        """Call for an update"""
+        if self.device.updated:
+            self.update_ha_state()
 
 
 class EcobeeTemperature(EcobeeSensorBase):
